@@ -2,6 +2,8 @@
 
 LOGFILE="/var/log/dtu_onboarding.log"
 exec > >(tee -a "$LOGFILE") 2>&1
+echo "Running as user: $(whoami)"
+id
 echo "---- Script started at $(date) ----"
 
 echo "✅ Running: onboarding script"
