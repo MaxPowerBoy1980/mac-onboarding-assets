@@ -32,3 +32,5 @@ chown "$logged_in_user" "$command_file"
 sleep 4
 
 echo "---- Script ended at $(date) ----"
+
+exit 0
