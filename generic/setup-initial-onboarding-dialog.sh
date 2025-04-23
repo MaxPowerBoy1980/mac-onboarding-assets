@@ -85,8 +85,8 @@ echo "icon: SF=checkmark.seal" >>"$command_file"
 sleep 1
 
 echo "progress: 100" >>"$command_file"
-echo -e "title: 4. Sign In to Finish" >>"$command_file"
-echo "message: Please sign in to Company Portal to complete your setup. And you're all set." >>"$command_file"
+echo -e "title: 4. We will now proceed to installing required apps." >>"$command_file"
+echo "message: After logging in to your new computer, you will be prompted to register Company Portal, and you're all set!" >>"$command_file"
 echo "icon: SF=person.crop.circle.badge.checkmark" >>"$command_file"
 wait
 echo "✅ All files downloaded. Ready to proceed."

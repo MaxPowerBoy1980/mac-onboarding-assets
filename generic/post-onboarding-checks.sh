@@ -4,6 +4,11 @@ log() {
     echo "[INFO] $1"
 }
 
+if [[ -f /tmp/psso-registered ]]; then
+    echo "[INFO] Mock: PSSO registered — skipping script."
+    exit 0
+fi
+
 # Downloads a file and shows progress as a mini dialog
 DIALOG="/usr/local/bin/dialog"
 ICON_COMPANYPORT_REGISTER="/usr/local/MDMAssets/assets/icon-companyportal-register.png"
@@ -12,7 +17,7 @@ ICON_NOTIFICATIONS="/usr/local/MDMAssets/assets/image_notifications_cp.png"
 ICON_KEY_CLOUD="/usr/local/MDMAssets/assets/icon-keycloud.png"
 ICON_CHECKMARK="/usr/local/MDMAssets/assets/checkmark.seal2x.png"
 
-CMD_FILE="/var/tmp/demo-dialog.cmd"
+CMD_FILE="/tmp/demo-dialog.cmd"
 
 # Cleanup old command file
 rm -f "$CMD_FILE"

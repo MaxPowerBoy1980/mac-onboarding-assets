@@ -34,7 +34,7 @@ command_file=$(mktemp /var/tmp/dialog_command.XXXXXX)
 chown "$logged_in_user" "$command_file"
 : >"$command_file" # Clear it
 
-sleep 1
+sleep 4
 
 # Launch SwiftDialog with command file
 /usr/local/bin/dialog \
